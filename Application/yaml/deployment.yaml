@@ -24,7 +24,7 @@ spec:
               protocol: TCP
           imagePullPolicy: IfNotPresent
 # Update with the image you build in part 1
-          image: 'quay.io/user2/marobort:v1'
+          image: 'quay.io/motiadler/marobort:v1'
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
   strategy:
