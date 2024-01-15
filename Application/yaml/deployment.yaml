@@ -2,18 +2,18 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
 # set your lab user name
-  name: <userName>-hello-world
+  name: user2-hello-world
 spec:
   replicas: 3
   selector:
     matchLabels:
 # set your lab user name
-      app: <userName>-hello-world
+      app: user2-hello-world
   template:
     metadata:
       labels:
 # set your lab user name
-        app: <userName>-hello-world
+        app: user2-hello-world
     spec:
       containers:
         - resources: {}
@@ -24,7 +24,7 @@ spec:
               protocol: TCP
           imagePullPolicy: IfNotPresent
 # Update with the image you build in part 1
-          image: 'quay.io/quay-user2/marobor:v1'
+          image: 'quay.io/quay-user2/marobort:v1'
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
   strategy:
